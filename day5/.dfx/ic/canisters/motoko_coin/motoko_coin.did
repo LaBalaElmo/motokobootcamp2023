@@ -1,0 +1,5 @@
+service : {
+  get: (text) -> (vec principal);
+  parseControllersFromCanisterStatusErrorIfCallerNotController: (text) ->
+   (vec principal);
+}
