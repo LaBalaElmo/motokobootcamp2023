@@ -36,6 +36,5 @@ next-env.d.ts
 
 # dfnity
 .dfx
-dfx.json
 canister_ids.json
 src/

@@ -1,0 +1,18 @@
+{
+  "canisters": {
+    "backend": {
+      "type": "motoko",
+      "main": "backend/calculator.mo"
+    },
+    "frontend": {
+      "dependencies": ["backend"],
+      "frontend": {
+        "entrypoint": "out/index.html"
+      },
+      "source": ["out"],
+      "type": "assets"
+    }
+  },
+  "dfx": "0.14.0",
+  "version": 1
+}

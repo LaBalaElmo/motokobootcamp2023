@@ -1,3 +1,5 @@
+/** @type {import('next').NextConfig} */
+
 const DFXWebPackConfig = require("./dfx.webpack.config")
 DFXWebPackConfig.initCanisterIds()
 
@@ -8,13 +10,19 @@ const EnvPlugin = new webpack.EnvironmentPlugin({
   DFX_NETWORK: "local"
 })
 
-module.exports = {
+const nextConfig = {
+  reactStrictMode: true,
+  experimental:{
+    appDir: true
+  },
+  images: { unoptimized: true },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     // Plugin
     config.plugins.push(EnvPlugin)
-
+    
     // Important: return the modified config
     return config
   },
   output: "export"
 }
+module.exports = nextConfig
