@@ -149,9 +149,6 @@ export default function Home() {
               </audio>
             </div>:
             <div>
-              <p style={{fontSize: "20px", color:"white", padding: "40px"}}>
-                Type &quot;987654321+-&quot; in the calculator and then press &quot;=&quot; to see an easter egg
-              </p>
             </div>
           }
         </div>
